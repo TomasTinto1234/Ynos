@@ -1,15 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit'
-import restaurantMocks from '../../../mocks/restaurants'
+import restaurant from '../../../mocks/restaurants'
 
 const initialState = {
-  restaurants: restaurantMocks,
+  restaurants: restaurant,
   loading: false,
   selectedRestaurant: null,
   offers: [], // aca se agrega el mock
 }
 
 export const restaurantSlice = createSlice({
-  name: 'restaurants',
+  name: 'restaurant',
   initialState,
   reducers: {
     selectedRestaurant: (state, action) => {

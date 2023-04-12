@@ -11,13 +11,13 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router-native";
 
  const MenuCardScreen = () => {
-  // const { id } = useParams();
-  // const { restaurants } = useSelector((state) => state.restaurantState);
-  // const logo = restaurants[id].image;
+  const { id } = useParams();
+  const { restaurants } = useSelector((state) => state.restaurantState);
+  const logo = restaurants[id].image;
   return (
     <SafeAreaView style={styles.container}>
-        <TitlePage text={'Hacer pedido'} white={false} route={'/'}/>
-      {/* <BackgroundCard logo={logo} /> */}
+        {/* <TitlePage text={'Hacer pedido'} white={false} route={'/'}/> */}
+      <BackgroundCard logo={logo} />
       <OptionsViewRestorant />
       <View style={styles.btn}>
         <BigButtonOrder route='/order' />

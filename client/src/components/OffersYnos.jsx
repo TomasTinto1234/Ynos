@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import { fonts } from '../utils/theme'
-// import Coupon from './Coupon'
+import Coupon from './Coupon'
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -11,7 +11,7 @@ const OffersYnos = () => {
   return (
     <View>
       <Text style={styles.offersTitle}>Ofertas Ynos</Text>
-      {/* <Coupon viewCheck={false}/> */}
+      <Coupon viewCheck={false}/>
     </View>
   )
 }

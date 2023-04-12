@@ -7,7 +7,7 @@ import LetterFilters from "./LetterFilters";
 const OptionsViewRestorant = () => {
   // el estado almacena el componente que se debe mostrar segun el boton presionado
   const [viewOffer, setViewOffer] = useState();
-  // const [viewLetter, setViewLetter] = useState(<LetterFilters />);
+  const [viewLetter, setViewLetter] = useState(<LetterFilters />);
 
   // controla si el boton fue presionado o no
   const [statusBtn, setStatusBtn] = useState("carta");
@@ -32,14 +32,14 @@ const OptionsViewRestorant = () => {
   return (
     <View>
       <View style={styles.containerInterno}>
-        {/* <OffersCardButtons
+        <OffersCardButtons
           viewOffer={handleViewOffert}
           viewLetter={handleViewLetter}
           statusBtn={statusBtn}
-        /> */}
+        />
       </View>
       {viewOffer && viewOffer}
-      {/* {viewLetter && viewLetter} */}
+      {viewLetter && viewLetter}
     </View>
   );
 };

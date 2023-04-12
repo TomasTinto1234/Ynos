@@ -13,7 +13,7 @@ import img from '../../assets/descarga.png'
 const BackgroundCard = ({ logo }) => {
   return (
     <SafeAreaView>
-      <TitlePage text='Inicio' route={'/mainmenu'} />
+      <TitlePage text='Inicio' route={'/'} />
       <View style={styles.backgroundCard_container}>
         <Image style={styles.backgroundImage} source={img} />
         <Image
