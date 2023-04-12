@@ -1,14 +1,30 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-// components
 
-export const MainMenuScreen = () => {
+// components
+import TitlePage from "../components/TitlePage";
+import WelcomeUser from "../components/WelcomeUser";
+import Search from "../components/Search";
+import SpecialYnos from "../components/SpecialYnos";
+import Categories from "../components/Categories";
+import NearMe from "../components/NearMe";
+import Navbar from "../components/NavBar";
+
+ const MainMenuScreen = () => {
   return (
     <View style={styles.container}>
-     <Text>probando</Text>
+    <TitlePage text={'Home'} white={false} route={'/'}/>
+    <ScrollView contentContainerStyle={styles.scroll}>
+    <WelcomeUser/>
+    <Search/>
+    <Categories/>
+    <NearMe/>
+    <SpecialYnos/>
+      </ScrollView>
+      <Navbar/>
     </View>
   );
 };
@@ -19,10 +35,13 @@ const styles = StyleSheet.create({
     height: hp("100.00%"),
     alignItems: "center",
     backgroundColor: "white",
-    gap: 15
+    gap: 15,
+
   },
-  logo: {
-    width: wp("50.00%"),
-    height: hp("30.00%"),
+  scroll: {
+    gap: 15,
+    alignItems: 'center'
   },
 });
+
+export default MainMenuScreen
